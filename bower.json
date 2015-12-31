@@ -17,6 +17,6 @@
   ],
   "dependencies": {
     "angular": "~1.4.8",
-    "github-readme": "torbensko/github-readme#~1.2.0"
+    "github-readme": "torbensko/github-readme#~1.3.0"
   }
 }

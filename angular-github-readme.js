@@ -16,16 +16,15 @@ angular.module('sko.github-readme', [])
       	src: '@', // e.g. https://github.com/torbensko/github-readme
       },
       link: function postLink(scope, element, attrs) {
-        console.log('hey');
       	
       	var watcher = scope.$watch('src', function() {
-          console.log('watch', scope.src);
+          console.log(scope.src, attrs.headingReduce);
       		if ( !scope.src ) { return; }
 	      	
 	      	element.githubReadme({
-    				src: scope.src,
-    				headingAdjust: attrs.headingAdjust ? attrs.headingAdjust : 1,
-  				});
+            githubReadme: scope.src,
+            headingReduce: attrs.headingReduce ? attrs.headingReduce : 0,
+          });
 
           // stop watching
           watcher();

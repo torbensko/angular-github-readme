@@ -14,25 +14,57 @@
 			}
 		</style>
 	</head>
-	<body ng-app="sko.github-readme" class="container">
-		<div class="row">
-			<div class="col-sm-5">
-				<h2>Simple demo</h2>
-				<p>
-					Displayed to the right is the readme of the underlying jquery plugin
-					powering this directive.
-				</p>
-			</div><!-- .col-sm-5 -->
-			<div class="col-sm-7">
-				<github-readme src="torbensko/github-readme" class="readme"></github-readme>
-			</div><!-- .col-sm-7 -->
-		</div><!-- .row -->
+	<body ng-app="DemoApp">
+
+		<div class="container" ng-controller="MainCtrl">
+			<div class="row">
+				<div class="col-sm-5">
+					<h2>Simple use</h2>
+					<p>
+						The readme to the right is defined by string literal.
+					</p>
+					<h4>Options:</h4>
+					<ul>
+						<li><strong>src</strong>: e.g. torbensko/angular-github-readme</li>
+						<li>
+							<strong>heading-reduce</strong>: lets you reduce the heading levels.
+						</li>
+					</ul>
+				</div><!-- .col-sm-5 -->
+				<div class="col-sm-7">
+					<github-readme src="torbensko/angular-github-readme" class="readme" heading-reduce="2"></github-readme>
+				</div><!-- .col-sm-7 -->
+			</div><!-- .row -->
+
+			<div class="row">
+				<div class="col-sm-5">
+					<h2>Variable based</h2>
+					<p>The readme to the right updates based on scope variable.</p>
+					<p><em>Of note:</em> once fetched, the readme will not update itself.</p>
+				</div><!-- .col-sm-5 -->
+				<div class="col-sm-7">
+					<github-readme src="{{ readme }}" class="readme"></github-readme>
+				</div><!-- .col-sm-7 -->
+			</div><!-- .row -->
+
+		</div><!-- .container -->
 
 		<script src="bower_components/jquery/dist/jquery.js"></script>
 		<script src="bower_components/js-base64/base64.js"></script>
 		<script src="bower_components/marked/lib/marked.js"></script>
 		<script src="bower_components/github-readme/github-readme.js"></script>
 		<script src="bower_components/angular/angular.js"></script>
+
+		<script>
+			angular.module('DemoApp', ['sko.github-readme']).
+	      controller('MainCtrl', function ($scope, $timeout) {
+	        $scope.readme = null;
+	        // pretend we don't initially know the repo name
+	        $timeout(function() { 
+	        	$scope.readme = 'torbensko/angular-github-readme'; 
+	        }, 500);
+	      });
+		</script>
 
 		<script src="angular-github-readme.js"></script>
 	</body>
