@@ -1,0 +1,28 @@
+{
+  "name": "angular-github-readme",
+  "description": "",
+  "main": "angular-github-readme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/torbensko/angular-github-readme.git"
+  },
+  "keywords": [
+    "github",
+    "readme",
+    "angular"
+  ],
+  "author": "Torben Sko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/torbensko/angular-github-readme/issues"
+  },
+  "homepage": "https://github.com/torbensko/angular-github-readme#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "morgan": "^1.6.1"
+  }
+}

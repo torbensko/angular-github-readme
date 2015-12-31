@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<style>
+			.readme {
+				display: block;
+		  	padding: 40px;
+		  	margin: 10px 0;
+		  	border-radius: 3px;
+		  	box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+		  	overflow-y: scroll;
+			}
+		</style>
+	</head>
+	<body ng-app="sko.github-readme" class="container">
+		<div class="row">
+			<div class="col-sm-5">
+				<h2>Simple demo</h2>
+				<p>
+					Displayed to the right is the readme of the underlying jquery plugin
+					powering this directive.
+				</p>
+			</div><!-- .col-sm-5 -->
+			<div class="col-sm-7">
+				<github-readme src="torbensko/github-readme" class="readme"></github-readme>
+			</div><!-- .col-sm-7 -->
+		</div><!-- .row -->
+
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/js-base64/base64.js"></script>
+		<script src="bower_components/marked/lib/marked.js"></script>
+		<script src="bower_components/github-readme/github-readme.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+
+		<script src="angular-github-readme.js"></script>
+	</body>
+</html>
