@@ -2,7 +2,7 @@
 
 Display a GitHub readme as easily as:
 
-		<github-readme src="torbensko/angular-github-readme"></github-readme>
+    <github-readme src="torbensko/angular-github-readme"></github-readme>
 
 The above would cause this readme to displayed in your webpage.
 
@@ -11,7 +11,7 @@ The above would cause this readme to displayed in your webpage.
 
 Installing via bower:
 
-		bower install torbensko/angular-github-readme
+    bower install torbensko/angular-github-readme
 
 Add the angular module: `sko.github-readme`
 
@@ -20,9 +20,9 @@ Add the angular module: `sko.github-readme`
 
 Install
 
-		npm install
-		bower install
+    npm install
+    bower install
 
 Run server
 
-		node server.js
+    node server.js
