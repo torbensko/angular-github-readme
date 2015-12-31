@@ -4,7 +4,7 @@ Display a GitHub readme as easily as:
 
     <github-readme src="torbensko/angular-github-readme"></github-readme>
 
-The above would cause this readme to displayed in your webpage.
+The above would result in this readme being rendered in to the current page.
 
 
 # Install
